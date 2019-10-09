@@ -31,6 +31,18 @@ const navList = [
     to: "fecolormatrix",
   },
   {
+    key: "feConvolverMatrix",
+    to: "feconvolvematrix",
+  },
+  {
+    key: "feComponentTransfer",
+    to: "fecomponenttransfer",
+  },
+  {
+    key: "feComposite",
+    to: "fecomposite",
+  },
+  {
     key: "gooeyEffect",
     to: "gooey",
   },
