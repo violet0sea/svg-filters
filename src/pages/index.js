@@ -11,31 +11,31 @@ const navList = [
     to: "gaussianblur",
   },
   {
-    key: "feoffset",
+    key: "feOffset",
     to: "feoffset",
   },
   {
-    key: "feimage",
+    key: "feImage",
     to: "feimage",
   },
   {
-    key: "feflood",
+    key: "feFlood",
     to: "feflood",
   },
   {
-    key: "feblend",
+    key: "feBlend",
     to: "feblend",
   },
   {
-    key: "fecolormatrix",
+    key: "feColorMatrix",
     to: "fecolormatrix",
   },
   {
-    key: "gooeyeffect",
+    key: "gooeyEffect",
     to: "gooey",
   },
   {
-    key: "gooeymenu",
+    key: "gooeyMenu",
     to: "gooeymenu",
   },
 ]
@@ -54,3 +54,4 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+

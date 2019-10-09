@@ -68,7 +68,7 @@ const GooeyMenu = () => {
             </li>
           </ul>
           <button className="menu-toggle-button" onClick={handleMenuClick}>
-            <i className="fa fa-plus menu-toggle-icon"></i>
+            <i className={`fa fa-plus menu-toggle-icon ${active ? "active" : "hide"}`}></i>
           </button>
         </div>
       </div>

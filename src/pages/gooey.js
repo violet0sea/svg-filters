@@ -1,9 +1,13 @@
-import React, { useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import * as d3 from "d3"
 
 import Layout from "../components/layout"
 
-const renderGooeyEffect = () => {
+const renderGooeyEffect = (openBlend) => {
+  const dom = document.querySelector('#gooey');
+  if(dom.firstChild) {
+    dom.removeChild(dom.firstChild);
+  }
   const width = 400
 
   const svg = d3
@@ -29,11 +33,13 @@ const renderGooeyEffect = () => {
     .attr("values", "1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9")
     .attr("result", "gooey")
 
-  filter
-    .append("feBlend")
-    .attr("in", "SourceGraphic")
-    .attr("in2", "gooey")
-    .attr("operator", "atop")
+    if(openBlend) {
+      filter
+        .append("feBlend")
+        .attr("in", "SourceGraphic")
+        .attr("in2", "gooey")
+        .attr("operator", "atop")
+    }
 
   var xScale = d3.scale
     .linear()
@@ -63,7 +69,7 @@ const renderGooeyEffect = () => {
     })
   }
 
-  var flyCircles = circleWrapper
+  circleWrapper
     .selectAll(".flyCircle")
     .data(flyCircleData)
     .enter()
@@ -106,12 +112,15 @@ const renderGooeyEffect = () => {
 }
 
 const SecondPage = () => {
+  const [openBlend, setOpenBlend] = useState(false);
   useEffect(() => {
-    renderGooeyEffect()
-  }, [])
+    renderGooeyEffect(openBlend)
+  }, [openBlend])
   return (
     <Layout>
-      <h2>feOffset</h2>
+      <h2>Gooey Effect</h2>
+      <p>SVG实现沾粘效果</p>
+      <button onClick={() => setOpenBlend(!openBlend)}>{ openBlend ? '关闭混合模式' : '开启混合模式'}</button>
       <div id="gooey"></div>
     </Layout>
   )

@@ -27,10 +27,6 @@ const Layout = ({ children }) => {
   return (
     <>
       <Helmet>
-        {/* <link
-          rel="stylesheet"
-          href="../assets/font/font-awesome/css/font-awesome.min.css"
-        ></link> */}
         <link
           rel="stylesheet"
           href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css"
@@ -44,7 +40,7 @@ const Layout = ({ children }) => {
           paddingTop: 0,
         }}
       >
-        <main>{children}</main>
+        <main style={{padding: '15px'}}>{children}</main>
       </div>
     </>
   )
