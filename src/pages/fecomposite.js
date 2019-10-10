@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 
-const SecondPage = () => (
+const feComposite = () => (
   <Layout>
     <h2>feComposite</h2>
     <svg
@@ -26,4 +26,4 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export default feComposite

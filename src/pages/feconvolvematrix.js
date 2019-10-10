@@ -2,17 +2,17 @@ import React from "react"
 
 import Layout from "../components/layout"
 
-const SecondPage = () => (
+const FeConvolveMatrix = () => (
   <Layout>
     <h2>feConvolveMatrix</h2>
-<p>feConvolveMatrix元素应用了一个矩阵卷积滤镜效果。一个卷积在输入图像中把像素与邻近像素组合起来制作出结果图像。通过卷积可以实现各种成像操作，包括模糊、边缘检测、锐化、压花和斜角。</p>
+    <p>feConvolveMatrix元素应用了一个矩阵卷积滤镜效果。一个卷积在输入图像中把像素与邻近像素组合起来制作出结果图像。通过卷积可以实现各种成像操作，包括模糊、边缘检测、锐化、压花和斜角。</p>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       style={{ width: 900, height: 600 }}
     > 
       <defs>
-        // 锐利
+        {/* // 锐利} */}
         <filter id="convolve">
           <feConvolveMatrix kernelMatrix="
               0 -1  0    
@@ -20,7 +20,7 @@ const SecondPage = () => (
               0 -1  0">
           </feConvolveMatrix>
         </filter>
-        // 浮雕
+        {/* // 浮雕 */}
         <filter id="convolve2">
           <feConvolveMatrix kernelMatrix="
             -9 -2  0    
@@ -28,7 +28,7 @@ const SecondPage = () => (
             0  2  9">
           </feConvolveMatrix>
         </filter>
-        // 边缘化
+        {/* // 边缘化 */}
         <filter id="convolve3">
           <feConvolveMatrix kernelMatrix="
               1  1  1    
@@ -77,4 +77,4 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export default FeConvolveMatrix

@@ -111,7 +111,7 @@ const renderGooeyEffect = (openBlend) => {
   }
 }
 
-const SecondPage = () => {
+const Gooey = () => {
   const [openBlend, setOpenBlend] = useState(false);
   useEffect(() => {
     renderGooeyEffect(openBlend)
@@ -125,4 +125,4 @@ const SecondPage = () => {
     </Layout>
   )
 }
-export default SecondPage
+export default Gooey

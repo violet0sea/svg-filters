@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 
-const SecondPage = () => (
+const FeMerge = () => (
   <Layout>
     <h2>feMerge</h2>
     <p>feMerge滤镜允许同时应用滤镜效果而不是按顺序应用滤镜效果。利用result存储别的滤镜的输出可以实现这一点，然后在一个 feMergeNode子元素中访问它。</p>
@@ -28,4 +28,4 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export default FeMerge

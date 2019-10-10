@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 
-const SecondPage = () => (
+const FeBlend = () => (
   <Layout>
     <h2>feBlend</h2>
     <p>feBlend滤镜把两个对象组合在一起，使它们受特定的混合模式控制</p>
@@ -30,8 +30,6 @@ const SecondPage = () => (
           />
           <feBlend in="SourceGraphic" in2="floodFill" mode="multiply" />
         </filter>
-      </defs>
-      <defs>
         <filter id="blend-color-dodge">
           <feFlood
             result="floodFill2"
@@ -69,4 +67,4 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export default FeBlend

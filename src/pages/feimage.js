@@ -1,11 +1,11 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import img from "../images/timg.jpeg"
 
-const SecondPage = () => (
+const FeImage = () => (
   <Layout>
     <h2>feImage</h2>
+    <p>从外部来源取得图像数据，并提供像素数据作为输出</p>
     <p>宽高同为150的矩形，左侧未使用feImage，右侧使用了feImage</p>
     <svg width="500" height="220">
       <defs>
@@ -19,4 +19,4 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export default FeImage

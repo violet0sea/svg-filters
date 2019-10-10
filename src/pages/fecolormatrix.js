@@ -2,9 +2,10 @@ import React from "react"
 
 import Layout from "../components/layout"
 
-const SecondPage = () => (
+const FeColorMatrix = () => (
   <Layout>
     <h2>feColorMatrix</h2>
+    <p>该滤镜基于转换矩阵对颜色进行变换。每一像素的颜色值(一个表示为[红,绿,蓝,透明度] 的矢量) 都经过矩阵乘法 (matrix multiplated) 计算出的新颜色</p>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -163,4 +164,4 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export default FeColorMatrix

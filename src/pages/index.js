@@ -43,10 +43,6 @@ const navList = [
     to: "fecomponenttransfer",
   },
   {
-    key: "feComposite",
-    to: "fecomposite",
-  },
-  {
     key: "gooeyEffect",
     to: "gooey",
   },

@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 
-const SecondPage = () => (
+const FeFlood = () => (
   <Layout>
     <h2>feFlood</h2>
     <p>用flood-color元素定义的颜色和flood-opacity元素定义的不透明度填充了滤镜子区域。</p>
@@ -26,4 +26,4 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export default FeFlood

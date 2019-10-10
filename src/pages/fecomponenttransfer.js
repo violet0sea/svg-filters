@@ -2,10 +2,10 @@ import React from "react"
 
 import Layout from "../components/layout"
 
-const SecondPage = () => (
+const FeComponentTransfer = () => (
   <Layout>
     <h2>feConvolveMatrix</h2>
-
+    <p> 针对图像里的每一个像素，利用公式计算，进行亮度、对比...等调整</p>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -92,8 +92,9 @@ const SecondPage = () => (
         style={{ filter: "url(#gamma)" }}
       />
       <text x="720" y="310">gamma</text>
+
     </svg>
   </Layout>
 )
 
-export default SecondPage
+export default FeComponentTransfer
