@@ -4,34 +4,24 @@ import Layout from "../components/layout"
 
 const SecondPage = () => (
   <Layout>
-    <h2>feColorMatrix</h2>
+    <h2>feComposite</h2>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       style={{ width: 600, height: 500 }}
-    >
-        <image
-            href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1570182424645&di=233605f77ef2b88c1f9d6ad35fce2fcb&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2018-06-02%2F5b12041ccbe39.jpg"
-            x="0"
-            y="5"
-            width="192"
-            height="120"
-        />
-        <rect x="220" y="5" width="192" height="120" fill="orange"></rect>
-        <filter id="compose">
-            <feFlood floodColor="orange" floodOpacity="0.5" result="orange" />
+    >   
+        <rect x="0" y="0" width="192" height="120" fill="red" fillOpacity="0.6"></rect>
+        <rect x="200" y="0" width="192" height="120" fill="green" fillOpacity="0.6"></rect>
+        <filter id="compose-in">
             <feFlood floodColor="green" floodOpacity="0.5" result="green" />
-            <feComposite in="SourceGraphic" in2="orange" operator="out" result="comp"/>
+            <feComposite in="SourceGraphic" in2="green" operator="in" result="comp"/>
         </filter>
-      <image
-        href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1570182424645&di=233605f77ef2b88c1f9d6ad35fce2fcb&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2018-06-02%2F5b12041ccbe39.jpg"
-        x="0"
-        y="185"
-        width="192"
-        height="120"
-        style={{ filter: "url(#compose)" }}
-      />
-        <rect x="220" y="185" width="192" height="120" fill="green"     style={{ filter: "url(#compose)" }}></rect>
+        <filter id="compose-out">
+            <feFlood floodColor="green" floodOpacity="0.5" result="green" />
+            <feComposite in="SourceGraphic" in2="green" operator="atop" result="comp"/>
+        </filter>
+        <rect x="0" y="180" width="192" height="120" fill="orange" fillOpacity="0.5" filter="url(#compose-in)"></rect> 
+        <rect x="200" y="180" width="192" height="120" fill="orange" fillOpacity="0.5" filter="url(#compose-out)"></rect> 
     </svg>
   </Layout>
 )

@@ -27,6 +27,10 @@ const navList = [
     to: "feblend",
   },
   {
+    key: "feMerge",
+    to: "femerge",
+  },
+  {
     key: "feColorMatrix",
     to: "fecolormatrix",
   },
