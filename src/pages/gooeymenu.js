@@ -86,7 +86,7 @@ const GooeyMenu = () => {
               values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
               result="gooey"
             />
-            <feBlend in="SourceGraphic" in2="gooey" operator="atop" />
+            <feBlend in="SourceGraphic" in2="gooey"/>
           </filter>
         </defs>
       </svg>
